@@ -85,7 +85,7 @@ These instructions will get you a copy of the project up and running on your loc
 - Change Directory to your project older, e.g. `cd my_github_projects`
 - Clone the Github Project inside this folder with Git Bash (Terminal) via:
     ```
-    $ git clone https://github.com/ddhartma/Unitiy-Banana-DQN-Project.git
+    $ git clone https://github.com/ddhartma/Deep-Reinforcement-Learning-Project-Unity-Banana-DQN.git
     ```
 
 - Change Directory
