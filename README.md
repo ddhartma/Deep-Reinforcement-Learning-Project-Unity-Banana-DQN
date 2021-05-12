@@ -145,7 +145,7 @@ These instructions will get you a copy of the project up and running on your loc
     ```
     jupyter notebook Navigation_Trained_Agent.ipynb
     ```
-- Run each cell in the notebook to watch trained and hopefully smart agent.
+- Run each cell in the notebook to watch a trained and smart agent.
 
 ## Acknowledgments <a name="Acknowledgments"></a>
 * This project is part of the Udacity Nanodegree program 'Deep Reinforcement Learning'. Please check this [link](https://www.udacity.com) for more information.
