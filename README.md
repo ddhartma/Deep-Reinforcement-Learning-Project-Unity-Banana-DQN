@@ -5,7 +5,7 @@
 ## Content
 - [Introduction](#intro)
 - [Unity Environment](#unitity_env)
-- [Files in the Repo](#files)
+- [Files in the Repo](#files_in_repo)
 - [Setup Instructions](#Setup_Instructions)
 - [Acknowledgments](#Acknowledgments)
 - [Further Links](#Further_Links)
@@ -13,6 +13,8 @@
 ## Introduction <a name="what_is_reinforcement"></a>
 - Reinforcement learning is **learning** what to do — **how to map situations to actions** — so as **to maximize a numerical reward** signal. The learner is not told which actions to take, but instead must discover which actions yield the most reward by trying them. (Sutton and Barto, [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book.html))
 - Deep reinforcement learning refers to approaches where the knowledge is represented with a deep neural network
+
+- This project is part of the Udacity Nanodegree program 'Deep Reinforcement Learning'. Please check this [link](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893?utm_source=gsem_brand&utm_medium=ads_r&utm_campaign=12906460312_c&utm_term=121838875579&utm_keyword=deep%20reinforcement%20udacity_e&gclid=CjwKCAjw-e2EBhAhEiwAJI5jg7Ycb934lFlosCFVpvwKRD_U5ESjMX18faGkkTTUkIyZVJ6yU4HkohoCyfIQAvD_BwE) for more information.
 
 ## Unity Environment <a name="unitity_env"></a>
 - [Unity Machine Learning Agents (ML-Agents)](https://github.com/Unity-Technologies/ml-agents) is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents. 
@@ -50,7 +52,7 @@
 
     ![image1]
 
-## Files in the repo <a name="files"></a>
+## Files in the repo <a name="files_in_repo"></a>
 The workspace contains three files:
 - **Navigation_Training.ipynb**: Main notebook file to implement DQN and traiin the agent.
 - **Navigation_Trained_Agent.ipynb**: Second notebook file to watch the behaviour of a trained agent.
@@ -94,18 +96,18 @@ These instructions will get you a copy of the project up and running on your loc
     ```
 
 ### Create (and activate) a new environment:
-- Use Python 3.6 for the environment
+- Create a Python 3.6 environment via conda
     ```
     $ conda create --name drlnd python=3.6
     $ conda activate drlnd
     ```
 
-- To install ```requirements.txt``` in the new environment, use the **pip** installed within the environment. Thus we should install pip first by
+- To install ```requirements.txt``` in the new environment, use **pip** installed within the environment. Install pip first by
     ```
     $ conda install pip
     ```
 
-- Install the all packages in ```requirements.txt``` (via pip and conda) needed to train and watch a smart agent
+- Install the all packages in ```requirements.txt``` (via pip) needed to train and watch a smart agent
     ```
     $ pip install -r requirements.txt
     ```
@@ -126,8 +128,8 @@ These instructions will get you a copy of the project up and running on your loc
     ```
     env = UnityEnvironment(file_name="<file_name>"
     ```
-    with the file name of the Unity evironment (**Banana...**)
-- Save the notebooks
+    with the file name of the Unity evironment (**Banana...**).
+    Save the notebooks.
 
 ### To Start Agent Training
 - Navigate via CLI to ```Navigation_Training.ipynb```
@@ -135,7 +137,7 @@ These instructions will get you a copy of the project up and running on your loc
     ```
     jupyter notebook Navigation_Training.ipynb
     ```
-- Run each cell in the notebook to train the agent
+- Run each cell in the notebook to train the agent.
 
 ### To Watch a Smart Agent
 - Navigate via CLI to ```Navigation_Trained_Agent.ipynb```
@@ -143,7 +145,7 @@ These instructions will get you a copy of the project up and running on your loc
     ```
     jupyter notebook Navigation_Trained_Agent.ipynb
     ```
-- Run each cell in the notebook to train the agent
+- Run each cell in the notebook to watch trained and hopefully smart agent.
 
 ## Acknowledgments <a name="Acknowledgments"></a>
 * This project is part of the Udacity Nanodegree program 'Deep Reinforcement Learning'. Please check this [link](https://www.udacity.com) for more information.
