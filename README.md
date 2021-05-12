@@ -53,15 +53,17 @@
     ![image1]
 
 ## Files in the repo <a name="files_in_repo"></a>
-The workspace contains three files:
-- **Navigation_Training.ipynb**: Main notebook file to implement DQN and traiin the agent.
-- **Navigation_Trained_Agent.ipynb**: Second notebook file to watch the behaviour of a trained agent.
-- **dqn_agent.py**: Python file to develop the reinforcement learning agent.
-- **model.py**: Contains the pytorch Deep Learning model,  a deep neural network that acts as a function approximator, i.e. it define a neural network architecture that maps states to action values.
-- **checkpoint.pth**: Pytorch state_dict file containing trained weights.
-- **Banana.app**: Downloaded Unity Environment needed to watch a trained agent.
-- **unity-environment.log**: Log file repoting the last interaction with the environment.
-- **Report.md**: Markdown file with a detailed description of the implementation.
+The workspace contains the following files:
+- **README.md**: Markdown file, the readme of this repo. 
+- **Report.md**: Markdown file, a detailed description of the code implementation.
+- **/notebooks_python/Navigation_Training.ipynb**: Main notebook file to implement DQN and to train the agent.
+- **/notebooks_python/Navigation_Trained_Agent.ipynb**: Second notebook file to watch the behaviour of a trained agent.
+- **/notebooks_python/dqn_agent.py**: Python file containing the implementation of the deep reinforcement learning agent.
+- **/notebooks_python/model.py**: Python file containing the PyTorch Deep Learning model,  a deep neural network that acts as a function approximator, i.e. it defines a neural network architecture that maps states to action values.
+- **/notebooks_python/checkpoint.pth**: PyTorch state_dict file containing trained weights.
+- **/notebooks_python/Banana.app/Contents**: Downloaded Unity Environment needed to watch a trained agent.
+- **/notebooks_python/unity-environment.log**: Log file repoting the last interaction with the environment.
+
 
 ## Setup Instructions <a name="Setup_Instructions"></a>
 The following is a brief set of instructions on setting up a cloned repository.
