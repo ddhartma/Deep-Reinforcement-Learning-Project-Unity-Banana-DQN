@@ -12,8 +12,8 @@
 ## Implementation - Navigation_Training.ipynb <a name="impl_notebook_train"></a>
 - Open jupyter notebook file ```Navigation_Training.ipynb```
     ### Import important libraries
-    - modul ***unityagents*** provides the Unity Environment. This modul is part and installed via requirements.txt. Check the README.md file for detailed setup instructions.
-    - modul **dqn_agent** is the own implementation of an DQN agent. Check the description of **dqn_agent.py** for further details. 
+    - modul ***unityagents*** provides the Unity Environment. This modul is part of requirements.txt. Check the README.md file for detailed setup instructions.
+    - modul **dqn_agent** contains the implementation of an DQN agent. Check the description of **dqn_agent.py** for further details. 
     ```
     import random
     import torch
@@ -26,9 +26,8 @@
     from dqn_agent import Agent
     ```
     ### Instantiate the Environment
+    - Load the UnityEnvironment and store it in **env**
     - Environments contain brains which are responsible for deciding the actions of their associated agents.
-    - Here we check for the first brain available, and set it as the default brain we will be controlling from Python.
-    - brain_name = 'BananaBrain'
     ```
     env = UnityEnvironment(file_name="Banana.app")
     # get the default brain
@@ -40,13 +39,13 @@
     agent = Agent(state_size=state_size, action_size=action_size, seed=0)
     ```
     ### Watch an untrained agent
-    - state - (numpy arrray) with 37 float values, contains the **agent's velocity**, along with **ray-based perception of objects** around the agent's forward direction
-    - action - (int) four actions for four directions (0...3) are possible. See README.md for further details
-    - env_info - (unityagent instance)
-    - next_state - (numpy array) next state (here chosen by random action)
-    - reward - (int/float) +1 is provided for collecting a yellow banana and -1 is provided for collecting a blue banana
-    - done - (bool) if True episode is over
-    - score - (float) cumulative reward, scoring after each action
+    - **state** - (numpy arrray) with 37 float values, contains the **agent's velocity**, along with **ray-based perception of objects** around the agent's forward direction
+    - **action** - (int) four actions for four directions (0...3) are possible. See README.md for further details
+    - **env_info** - (unityagent instance)
+    - **next_state** - (numpy array) next state (here chosen by random action)
+    - **reward** - (int/float) +1 is provided for collecting a yellow banana and -1 is provided for collecting a blue banana
+    - **done** - (bool) if True episode is over
+    - **score** - (float) cumulative reward, scoring after each action
     ```
     env_info = env.reset(train_mode=True)[brain_name]  # reset the environment
     state = env_info.vector_observations[0]            # get the current state
@@ -624,8 +623,8 @@
 
 ## Ideas for future work <a name="ideas_future"></a> 
 - Implement Deep Q-Learning Improvements like:
-    - [Double Q-Learning](https://arxiv.org/abs/1509.06461): Deep Q-Learning [tends to overestimate](https://www.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1993_1/thrun_sebastian_1993_1.pdf) action values. Double Q-Learning has been shown to work well in practice to help with this. The max operation in the update rule for Q-learning with function approximation is needed to find the best possible Q value for the next target. In early stages, the Q-values are still evolving, This can result in an overestimation of Q-values, since the maximum values are chosen from noisy numbers. Solution: Select the best action using one set of weights w, but evaluate it using a different set of weights w'. It's basically like having two separate function approximators that must agree on the best action.
+    - [Double Q-Learning](https://arxiv.org/abs/1509.06461): Deep Q-Learning [tends to overestimate](https://www.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1993_1/thrun_sebastian_1993_1.pdf) action values. In early stages, the Q-values are still evolving. This can result in an overestimation of Q-values, since the maximum values are chosen from noisy numbers. Solution: Select the best action using one set of weights w, but evaluate it using a different set of weights w'. It's basically like having two separate function approximators.
 
     - [Prioritized Experience Replay](https://arxiv.org/abs/1511.05952): Deep Q-Learning samples experience transitions uniformly from a replay memory. Prioritized experienced replay is based on the idea that the agent can learn more effectively from some transitions than from others, and the more important transitions should be sampled with higher probability.
 
-    - [Dueling DQN](): Currently, in order to determine which states are (or are not) valuable, we have to estimate the corresponding action values for each action. However, by replacing the traditional Deep Q-Network (DQN) architecture with a dueling architecture, we can assess the value of each state, without having to learn the effect of each action. A sequence of convolutional layers followed by a couple of fully connected layers that produce Q values. The core idea of dueling networks is to use two streams, one that estimates the state value function and one that estimates the advantage for each action.
+    - [Dueling DQN](): Currently, in order to determine which states are (or are not) valuable, we have to estimate the corresponding action values for each action. However, by replacing the traditional Deep Q-Network (DQN) architecture with a dueling architecture, we can assess the value of each state, without having to learn the effect of each action. The core idea of dueling networks is to use two streams, one that estimates the state value function and one that estimates the advantage for each action.
