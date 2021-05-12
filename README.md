@@ -71,7 +71,7 @@ The following is a brief set of instructions on setting up a cloned repository.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites: Installation of Python via Anaconda and Command Line Interaface <a name="Prerequisites"></a>
-- Install [Anaconda](https://www.anaconda.com/distribution/). Install Python 3.7 - 64 Bit
+- Install [Anaconda](https://www.anaconda.com/distribution/). Install Python - 64 Bit
 
 - Upgrade Anaconda via
     ```
@@ -79,15 +79,15 @@ These instructions will get you a copy of the project up and running on your loc
     $ conda upgrade --all
     ```
 
-- Optional: In case of trouble add Anaconda to your system path. Write in your CLI
+- Optional: In case of trouble add Anaconda to your system path. Write in your Command Line Interface (CLI)
     ```
     $ export PATH="/path/to/anaconda/bin:$PATH"
     ```
 
 ### Clone the project <a name="Clone_the_project"></a>
-- Open your Command Line Interface
+- Open your CLI
 - Change Directory to your project older, e.g. `cd my_github_projects`
-- Clone the Github Project inside this folder with Git Bash (Terminal) via:
+- Clone the Github Project inside this folder via:
     ```
     $ git clone https://github.com/ddhartma/Deep-Reinforcement-Learning-Project-Unity-Banana-DQN.git
     ```
@@ -109,7 +109,7 @@ These instructions will get you a copy of the project up and running on your loc
     $ conda install pip
     ```
 
-- Install the all packages in ```requirements.txt``` (via pip) needed to train and watch a smart agent
+- Install all packages provided in ```requirements.txt``` (via pip) needed to train and watch a smart agent
     ```
     $ pip install -r requirements.txt
     ```
