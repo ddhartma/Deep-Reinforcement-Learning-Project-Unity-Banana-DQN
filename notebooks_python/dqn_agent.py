@@ -17,6 +17,7 @@ UPDATE_EVERY = 4        # how often to update the network
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
+
 class Agent():
     """ Interacts with and learns from the environment."""
 
@@ -43,16 +44,21 @@ class Agent():
         self.qnetwork_target = QNetwork(state_size, action_size, seed).to(device)
         self.optimizer = optim.Adam(self.qnetwork_local.parameters(), lr=LR)
 
+
         # In case of a trained model
         if state_dict != None:
             weights = torch.load(state_dict)
             self.qnetwork_local.load_state_dict(weights)
             self.qnetwork_target.load_state_dict(weights)
 
+
         # Replay memory
         self.memory = ReplayBuffer(action_size, BUFFER_SIZE, BATCH_SIZE, seed)
+
+
         # Initialize time step (for updating every UPDATE_EVERY steps)
         self.t_step = 0
+
 
     def step(self, state, action, reward, next_state, done):
         """ Update the agent's knowledge, using the most recently sampled tuple.
@@ -125,6 +131,7 @@ class Agent():
             OUTPUTS:
             ------------
         """
+
         states, actions, rewards, next_states, dones = experiences
 
         ## Compute and minimize the loss
@@ -143,6 +150,8 @@ class Agent():
 
         # Compute loss
         loss = F.mse_loss(Q_expected, Q_targets)
+
+
         # Minimize the loss
         self.optimizer.zero_grad()
         loss.backward()
@@ -169,7 +178,6 @@ class Agent():
         """
         for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
             target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
-
 
 class ReplayBuffer:
     """ Fixed-size buffer to store experience tuples.
