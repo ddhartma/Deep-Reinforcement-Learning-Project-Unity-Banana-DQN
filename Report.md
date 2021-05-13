@@ -418,7 +418,7 @@
                 target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
 
     ```
-    ### ReplayBuffer class to reduce consecutive experince tuple correlations
+    ### ReplayBuffer class to reduce consecutive experience tuple correlations
     - **init** function: initialize a ReplayBuffer object
     - **add** function: add an experience tuple to self.memory object
     - **sample** function: 
