@@ -673,7 +673,7 @@
     - **sample** function: 
         - choose per random one **experiences** tuple with batch_size experiences
         - return states, actions, rewards, next_states and dones each as torch tensors
-    - **__len__**: return the current size of internal memory
+    - **__len__** function: return the current size of internal memory
     ```
     class ReplayBuffer:
         """ Fixed-size buffer to store experience tuples."""
@@ -758,7 +758,7 @@
             mem_size = len(self.memory)
             return mem_size
     ```
-    ### PrioritizedReplayBuffer class to reduce consecutive experience tuple correlations and keep maximum likelihodd acction as choice
+    ### PrioritizedReplayBuffer class to reduce consecutive experience tuple correlations and keep maximum likelihood action as choice
     ```
     class PrioritizedReplayBuffer(object):
         """ Fixed-size buffer to store experience tuples
@@ -877,8 +877,6 @@
                                                 max_weight,
                                                 i_n)
                             for ii in self._indexes]
-
-
 
             return torch.tensor(this_weights,
                                 device=device,
@@ -1050,3 +1048,4 @@
     - [Advanced DQNs: Playing Pac-man with Deep Reinforcement Learning by mapping pixel images to Q values](https://towardsdatascience.com/advanced-dqns-playing-pac-man-with-deep-reinforcement-learning-3ffbd99e0814)
     - Interesting GitHub repo based on [Prioritized Experience Replay](https://github.com/rlcode/per)
     - [Conquering OpenAI Retro Contest 2: Demystifying Rainbow Baseline](https://medium.com/intelligentunit/conquering-openai-retro-contest-2-demystifying-rainbow-baseline-9d8dd258e74b)
+  

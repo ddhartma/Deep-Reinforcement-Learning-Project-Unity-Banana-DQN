@@ -195,3 +195,4 @@ Optimize DQNs:
     - Repo1 based on a Navigation solution including DQN optimizations [silviomori](https://github.com/silviomori/udacity-deep-reinforcement-learning-p1-navigation)
 
     - Repo2 based on a Navigation solution including DQN optimizations [vaanxy](https://github.com/vaanxy/drlnd-p1-navigation)
+    - Repo2 based on a Navigation solution including DQN optimizations [ucaiado](https://github.com/ucaiado/banana-rl)
