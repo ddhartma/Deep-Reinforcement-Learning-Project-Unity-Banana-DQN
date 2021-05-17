@@ -60,7 +60,9 @@ The workspace contains the following files:
 - **/notebooks_python/Navigation_Trained_Agent.ipynb**: Second notebook file to watch the behaviour of a trained agent.
 - **/notebooks_python/dqn_agent.py**: Python file containing the implementation of the deep reinforcement learning agent.
 - **/notebooks_python/model.py**: Python file containing the PyTorch Deep Learning model,  a deep neural network that acts as a function approximator, i.e. it defines a neural network architecture that maps states to action values.
-- **/notebooks_python/checkpoint.pth**: PyTorch state_dict file containing trained weights.
+- **/notebooks_python/checkpoint_dqn.pth**: PyTorch state_dict file containing trained weights for simple DQN.
+- **/notebooks_python/checkpoint_ddqn.pth**: PyTorch state_dict file containing trained weights for Double DQN.
+- **/notebooks_python/checkpoint_prbddqn.pth**: PyTorch state_dict file containing trained weights for PrioritizedReplayBuffer Double DQN.
 - **/notebooks_python/Banana.app/Contents**: Downloaded Unity Environment needed to watch a trained agent.
 - **/notebooks_python/unity-environment.log**: Log file repoting the last interaction with the environment.
 
