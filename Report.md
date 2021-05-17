@@ -235,7 +235,7 @@
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     ```
-    ### Weighted loss functiojn for PrioritizedReplayBuffer
+    ### Weighted loss function for PrioritizedReplayBuffer
     ```
     def weighted_mse_loss(input, target, weights):
         """ Return the weighted mse loss to be used by Prioritized experience replay
