@@ -10,13 +10,13 @@
 - [Acknowledgments](#Acknowledgments)
 - [Further Links](#Further_Links)
 
-## Introduction <a name="what_is_reinforcement"></a>
+## Introduction <a id="what_is_reinforcement"></a>
 - Reinforcement learning is **learning** what to do — **how to map situations to actions** — so as **to maximize a numerical reward** signal. The learner is not told which actions to take, but instead must discover which actions yield the most reward by trying them. (Sutton and Barto, [Reinforcement Learning: An Introduction](http://incompleteideas.net/book/the-book.html))
 - Deep reinforcement learning refers to approaches where the knowledge is represented with a deep neural network
 
 - This project is part of the Udacity Nanodegree program 'Deep Reinforcement Learning'. Please check this [link](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893?utm_source=gsem_brand&utm_medium=ads_r&utm_campaign=12906460312_c&utm_term=121838875579&utm_keyword=deep%20reinforcement%20udacity_e&gclid=CjwKCAjw-e2EBhAhEiwAJI5jg7Ycb934lFlosCFVpvwKRD_U5ESjMX18faGkkTTUkIyZVJ6yU4HkohoCyfIQAvD_BwE) for more information.
 
-## Unity Environment <a name="unitity_env"></a>
+## Unity Environment <a id="unitity_env"></a>
 - [Unity Machine Learning Agents (ML-Agents)](https://github.com/Unity-Technologies/ml-agents) is an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents. 
 - Implementations (based on PyTorch) of state-of-the-art algorithms to enable game developers and hobbyists to easily train intelligent agents for 2D, 3D and VR/AR games
 - For this project, an agent to navigate (and collect bananas!) in a large, square world will be trained.
@@ -52,7 +52,7 @@
 
     ![image1]
 
-## Files in the repo <a name="files_in_repo"></a>
+## Files in the repo <a id="files_in_repo"></a>
 The workspace contains the following files:
 - **README.md**: Markdown file, the readme of this repo. 
 - **Report.md**: Markdown file, a detailed description of the code implementation.
@@ -67,12 +67,12 @@ The workspace contains the following files:
 - **/notebooks_python/unity-environment.log**: Log file repoting the last interaction with the environment.
 
 
-## Setup Instructions <a name="Setup_Instructions"></a>
+## Setup Instructions <a id="Setup_Instructions"></a>
 The following is a brief set of instructions on setting up a cloned repository.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### Prerequisites: Installation of Python via Anaconda and Command Line Interaface <a name="Prerequisites"></a>
+### Prerequisites: Installation of Python via Anaconda and Command Line Interaface <a id="Prerequisites"></a>
 - Install [Anaconda](https://www.anaconda.com/distribution/). Install Python - 64 Bit
 
 - Upgrade Anaconda via
@@ -86,7 +86,7 @@ These instructions will get you a copy of the project up and running on your loc
     $ export PATH="/path/to/anaconda/bin:$PATH"
     ```
 
-### Clone the project <a name="Clone_the_project"></a>
+### Clone the project <a id="Clone_the_project"></a>
 - Open your CLI
 - Change Directory to your project older, e.g. `cd my_github_projects`
 - Clone the Github Project inside this folder via:
@@ -151,10 +151,10 @@ These instructions will get you a copy of the project up and running on your loc
     ```
 - Run each cell in the notebook to watch a trained and smart agent.
 
-## Acknowledgments <a name="Acknowledgments"></a>
+## Acknowledgments <a id="Acknowledgments"></a>
 * This project is part of the Udacity Nanodegree program 'Deep Reinforcement Learning'. Please check this [link](https://www.udacity.com) for more information.
 
-## Further Links <a name="Further_Links"></a>
+## Further Links <a id="Further_Links"></a>
 Git/Github
 * [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html)
 * [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
