@@ -9,7 +9,7 @@
 - [Implementation - Navigation_Trained_Agent.ipynb](#impl_notebook_trained_agent)
 - [Ideas for future work](#ideas_future)
 
-## Implementation - Navigation_Training.ipynb <a name="impl_notebook_train"></a>
+## Implementation - Navigation_Training.ipynb <a id="impl_notebook_train"></a>
 - Open jupyter notebook file ```Navigation_Training.ipynb```
     ### Import important libraries
     - modul ***unityagents*** provides the Unity Environment. This modul is part of requirements.txt. Check the README.md file for detailed setup instructions.
@@ -208,7 +208,7 @@
     env.close()
     ```
 
-## Implementation - dqn_agent.py <a name="impl_agent"></a>
+## Implementation - dqn_agent.py <a id="impl_agent"></a>
 - Open Python file ```dqn_agent.py```
     ### Load important libraries
     ```
@@ -919,7 +919,7 @@
 
 
 
-## Implementation - model.py <a name="impl_model"></a>
+## Implementation - model.py <a id="impl_model"></a>
 - Open Python file ```model.py```
     ### Import important libraries
     ```
@@ -979,7 +979,7 @@
             output = self.fc3(x)
             return output
     ```
-## Implementation - Navigation_Trained_Agent.ipynb <a name="impl_notebook_trained_agent"></a> 
+## Implementation - Navigation_Trained_Agent.ipynb <a id="impl_notebook_trained_agent"></a> 
 - Open Jupyter Notebook ```Navigation_Trained_Agent.ipynb```
     ### Import important libraries
     - modul ***unityagents*** provides the Unity Environment. This modul is part and installed via requirements.txt. Check the README.md file for detailed setup instructions.
@@ -1030,7 +1030,7 @@
     print("Score: {}".format(score))
     ```
 
-## Ideas for future work <a name="ideas_future"></a> 
+## Ideas for future work <a id="ideas_future"></a> 
 - Implement Deep Q-Learning Improvements like:
     - [Double Q-Learning](https://arxiv.org/abs/1509.06461): Deep Q-Learning [tends to overestimate](https://www.ri.cmu.edu/pub_files/pub1/thrun_sebastian_1993_1/thrun_sebastian_1993_1.pdf) action values. In early stages, the Q-values are still evolving. This can result in an overestimation of Q-values, since the maximum values are chosen from noisy numbers. Solution: Select the best action using one set of weights w, but evaluate it using a different set of weights w'. It's basically like having two separate function approximators.
 
